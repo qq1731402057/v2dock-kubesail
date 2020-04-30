@@ -5,12 +5,12 @@ cat > /etc/v2ray/config.json << EOF
 {
     "inbounds": [
         {
-            "port": $V2RAY_PORT,
+            "port": 9199,
             "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": "$BACKEND_UUID",
+                        "id": "6e95a3ae-4580-486b-9cfa-27782f101a93",
                         "alterId": 64
                     }
                 ]
@@ -22,7 +22,7 @@ cat > /etc/v2ray/config.json << EOF
             "settings": {
                 "clients": [
                     {
-                        "id": "$FRONTEND_UUID",
+                        "id": "6e95a3ae-4580-486b-9cfa-27782f101a93",
                         "alterId": 64
                     }
                 ]
@@ -30,7 +30,7 @@ cat > /etc/v2ray/config.json << EOF
             "streamSettings": {
                 "network": "ws",
                 "wsSettings": {
-                    "path": "/$V2RAY_PATH"
+                    "path": "/ws"
                 }
             }
         }
